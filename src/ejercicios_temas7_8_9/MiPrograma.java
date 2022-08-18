@@ -16,27 +16,84 @@ public class MiPrograma {
     public static class MiPrograma2 {
         public MiPrograma2() {
 
-            String dni = " ";
+            int edad = 0;
             String nombre = " ";
+            HashMap<Integer,String> datos = new HashMap<>();
+            int arrayEdad[];
+            arrayEdad = new int[3];
+            int mayorEdad = 0;
 
-            //Fase de introduccion de datos:
             try{
-                Scanner dniIn = new Scanner(System.in);
-                System.out.println("Introduce tu dni");
-                dni = dniIn.next();
-                Scanner nombreIn = new Scanner(System.in);
+
+                Scanner edadIn1 = new Scanner(System.in);
+                System.out.println("Introduce tu edad");
+                edad = edadIn1.nextInt();
+                Scanner nombreIn1 = new Scanner(System.in);
                 System.out.println("Introduce tu nombre");
-                nombre = nombreIn.next();
+                nombre = nombreIn1.next();
+                datos.put(edad, nombre);
+                arrayEdad[0]= edad;
+
+
+                Scanner edadIn2 = new Scanner(System.in);
+                System.out.println("Introduce tu edad");
+                edad = edadIn2.nextInt();
+                Scanner nombreIn2 = new Scanner(System.in);
+                System.out.println("Introduce tu nombre");
+                nombre = nombreIn2.next();
+                datos.put(edad, nombre);
+                arrayEdad[1]= edad;
+
+
+                Scanner edadIn3 = new Scanner(System.in);
+                System.out.println("Introduce tu edad");
+                edad = edadIn3.nextInt();
+                Scanner nombreIn3 = new Scanner(System.in);
+                System.out.println("Introduce tu nombre");
+                nombre = nombreIn3.next();
+                datos.put(edad, nombre);
+                arrayEdad[2]= edad;
+
             }catch (InputMismatchException e){
                 System.out.println("Datos incorrectos");
             }
 
-            //Fase de guardar datos en un mapa:
-            HashMap<String,String> cuenta = new HashMap<>();
-            cuenta.put(dni, nombre);
-            System.out.println(cuenta);
+            System.out.println(datos);
+
+            for(int i=0; i<arrayEdad.length; i++){
+                if(arrayEdad[i]>mayorEdad){
+                    mayorEdad = arrayEdad[i];
+                }
+            }
+
+            System.out.println("La persona de mas edad tiene: " + mayorEdad);
 
 
+
+
+
+
+            /*
+ for(int array : arrayEdad) {
+                System.out.println(array);
+            }
+
+
+
+
+
+
+
+ for(int key : datos.keySet()){
+                System.out.println(key);
+                arrayEdad[]
+            }
+
+
+
+            for(int array : arrayEdad) {
+                System.out.println(array);
+            }*/
 
 
 
