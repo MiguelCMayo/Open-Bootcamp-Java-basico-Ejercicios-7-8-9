@@ -1,12 +1,12 @@
 package ejercicios_temas7_8_9;
 
 import java.util.*;
-import static ejercicios_temas7_8_9.NameFormatException.DividePorCero;
+import static ejercicios_temas7_8_9.ArithmeticException.DividePorCero;
 import static ejercicios_temas7_8_9.FuncionReverse.reverse;
 
 public class Main {
 
-    public static void main(String[] args) throws NameFormatException{
+    public static void main(String[] args) throws ArithmeticException{
 
         //Funcion reverse.
 
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("EJERCICIO 1:");
 
         String arrayUni[] = {"Antonio","Maria","Miguel","Ana"};
-        //System.out.println(Arrays.toString(arrayUni));
+
         for(String array : arrayUni){
             System.out.println(array);
         }
@@ -113,10 +113,10 @@ public class Main {
         // por ejemplo). Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
 
         System.out.println("EJERCICIO 7:");
-
+        System.out.println("Si divides entre 0 se producira una excepcion");
         try{
             DividePorCero();
-        }catch(NameFormatException e){
+        }catch(ArithmeticException e){
             e.printStackTrace();
         }finally{
             System.out.println("Demo de código");
