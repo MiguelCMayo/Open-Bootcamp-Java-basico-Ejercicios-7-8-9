@@ -1,7 +1,6 @@
 package ejercicios_temas7_8_9;
 
 import java.util.*;
-
 import static ejercicios_temas7_8_9.NameFormatException.DividePorCero;
 import static ejercicios_temas7_8_9.FuncionReverse.reverse;
 
@@ -137,7 +136,7 @@ public class Main {
 
         System.out.println("EJERCICIO 9:");
 
-
+        MiPrograma.EdadMayor calculo = new MiPrograma.EdadMayor();
 
 
 

@@ -2,25 +2,19 @@ package ejercicios_temas7_8_9;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class MiPrograma {
-
-    public static void main(String[] args) {
-
-        MiPrograma2 prueba = new MiPrograma2();
-
-
-    }
-
-    public static class MiPrograma2 {
-        public MiPrograma2() {
+    public static class EdadMayor {
+        public EdadMayor() {
 
             int edad = 0;
             String nombre = " ";
             HashMap<Integer,String> datos = new HashMap<>();
-            int arrayEdad[];
-            arrayEdad = new int[3];
+            int arrayEdad[]= new int[3];
+            String arrayNombre[]= new String[3];
+
             int mayorEdad = 0;
 
             try{
@@ -33,7 +27,7 @@ public class MiPrograma {
                 nombre = nombreIn1.next();
                 datos.put(edad, nombre);
                 arrayEdad[0]= edad;
-
+                arrayNombre[0]= nombre;
 
                 Scanner edadIn2 = new Scanner(System.in);
                 System.out.println("Introduce tu edad");
@@ -43,7 +37,7 @@ public class MiPrograma {
                 nombre = nombreIn2.next();
                 datos.put(edad, nombre);
                 arrayEdad[1]= edad;
-
+                arrayNombre[1]= nombre;
 
                 Scanner edadIn3 = new Scanner(System.in);
                 System.out.println("Introduce tu edad");
@@ -53,53 +47,25 @@ public class MiPrograma {
                 nombre = nombreIn3.next();
                 datos.put(edad, nombre);
                 arrayEdad[2]= edad;
+                arrayNombre[2]= nombre;
 
             }catch (InputMismatchException e){
                 System.out.println("Datos incorrectos");
             }
 
-            System.out.println(datos);
+            System.out.println("Datos del mapa:\n" + datos + "\n");
 
-            for(int i=0; i<arrayEdad.length; i++){
+            for(int i=0; i<arrayEdad.length && i<arrayNombre.length; i++){
                 if(arrayEdad[i]>mayorEdad){
                     mayorEdad = arrayEdad[i];
                 }
             }
 
-            System.out.println("La persona de mas edad tiene: " + mayorEdad);
-
-
-
-
-
-
-            /*
- for(int array : arrayEdad) {
-                System.out.println(array);
+            for(HashMap.Entry <Integer,String> pair : datos.entrySet()){
+                if(mayorEdad == pair.getKey()){
+                    System.out.println("La persona de mayor edad tiene " + pair.getKey() + " años y se llama " + pair.getValue());
+                }
             }
-
-
-
-
-
-
-
- for(int key : datos.keySet()){
-                System.out.println(key);
-                arrayEdad[]
-            }
-
-
-
-            for(int array : arrayEdad) {
-                System.out.println(array);
-            }*/
-
-
-
-
         }
-
-
     }
 }
