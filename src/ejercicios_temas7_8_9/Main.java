@@ -12,9 +12,9 @@ public class Main {
 
         System.out.println("EJERCICIO REVERSE:");
 
-        String texto = "Hola mundo";
-        texto = reverse(texto);
-        System.out.println(texto);
+        String text = "Hola mundo";
+        text = reverse(text);
+        System.out.println(text);
         System.out.println();
 
         //1. Crea un array unidimensional de Strings y recórrelo, mostrando únicamente sus valores.
@@ -136,7 +136,7 @@ public class Main {
 
         System.out.println("EJERCICIO 9:");
 
-        MiPrograma.EdadMayor calculo = new MiPrograma.EdadMayor();
+        MiPrograma.EdadMayor calc = new MiPrograma.EdadMayor();
 
 
 

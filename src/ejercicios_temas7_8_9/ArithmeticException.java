@@ -13,15 +13,15 @@ public class ArithmeticException extends Exception {
     static void DividePorCero() throws ArithmeticException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce dos numeros");
-        int numero1 = scanner.nextInt();
-        int numero2 = scanner.nextInt();
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
 
-        if(numero2 == 0 || numero1 == 0){
+        if(number1 == 0 || number2 == 0){
             throw new ArithmeticException("No puede dividirse entre 0");
         }
 
-        int resultado = numero1 / numero2;
-        System.out.println("El resultado es: " + resultado);
+        int result = number1 / number2;
+        System.out.println("El resultado es: " + result);
 
 
     }

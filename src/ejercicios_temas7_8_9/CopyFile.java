@@ -7,29 +7,30 @@ public class CopyFile{
 
     public CopyFile(String fileIn, String fileOut){
 
-        String texto = "";
+        String text = "";
         try{
-            Scanner textoIn = new Scanner(System.in);
+            Scanner textIn = new Scanner(System.in);
             System.out.println("Introduce el texto que quieres guardar en el fichero");
 
-            PrintStream textoFichero = new PrintStream("fichero_prueba.txt");
-            texto = textoIn.nextLine();
-            textoFichero.write(texto.getBytes());
+            PrintStream textFile = new PrintStream("fichero_prueba.txt");
+            text = textIn.nextLine();
+            textFile.write(text.getBytes());
 
-            InputStream ficheroIn = new FileInputStream(fileIn);
-            byte[] datos = ficheroIn.readAllBytes();
-            for(byte dato : datos){
-                System.out.print((char) dato);
-
+            InputStream file_In = new FileInputStream(fileIn);
+            byte[] data = file_In.readAllBytes();
+            System.out.println("El texto guardado es:");
+            for(byte dato : data){
+                System.out.print((char)dato);
             }
 
-            OutputStream ficheroOut = new FileOutputStream(fileOut);
-            ficheroOut.write(datos);
+            OutputStream file_Out = new FileOutputStream(fileOut);
+            file_Out.write(data);
 
-            ficheroIn.close();
-            ficheroOut.close();
-            textoFichero.close();
+            file_In.close();
+            file_Out.close();
+            textFile.close();
 
+            System.out.println();
             System.out.println("Enhorabuena, has creado y copiado el fichero!!");
 
         }catch (IOException e) {
